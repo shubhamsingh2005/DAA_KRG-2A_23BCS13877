@@ -11,7 +11,7 @@ public class DB {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Database URL: jdbc:mysql://hostname:port/database
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "Shubham@19");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "root", "Sarbani@1");
 
             System.out.println("Database Connected Successfully");
 

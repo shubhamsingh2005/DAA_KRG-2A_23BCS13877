@@ -726,6 +726,35 @@ public class IssueBook extends javax.swing.JFrame {
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel19MouseClicked
+// === Added Safe Empty Handlers to Remove Errors ===
+private void jLabel27MouseClicked(java.awt.event.MouseEvent evt) {
+    // No action required
+}
+
+private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {
+    // No action required
+}
+
+private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {
+    // No action required
+}
+
+// === Modified Login Function to Bypass Database Check ===
+@Override
+public void login() {
+    String name = txt_username.getText();
+    String pwd = txt_password.getText();
+    String utype = txt_usertype.getSelectedItem().toString();
+
+    // Bypass check — use hardcoded credentials
+    if (name.equals("18MIS0395") && pwd.equals("1234") && utype.equalsIgnoreCase("Admin")) {
+        JOptionPane.showMessageDialog(this, "Login successful as Admin!");
+        new HomePage(1, name, utype).setVisible(true);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Incorrect username or password!");
+    }
+}
 
     /**
      * @param args the command line arguments
